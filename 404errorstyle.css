@@ -1,0 +1,315 @@
+/*
+GERAL
+*/
+
+body {
+    font-family: "Comfortaa", Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: "Oswald", "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+}
+
+/*
+BUTTON
+*/
+
+#botao {
+    position: fixed;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: dodgerblue;
+    font-size: 1em;
+    border-radius: 0 6px 6px 0;
+    top: 20px;
+}
+
+#botao:hover {
+    background-color: rgb(13, 76, 139);
+    color: #fff;
+}
+
+/*
+404 ERROR MESSAGE
+*/
+
+#errortext {
+    background-image: url("https://drive.google.com/uc?id=1TqkOL0TbqM90k2ZpO0nNU2qT96wtnLPZ");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#errortext #error-text {
+    padding-top: 150px;
+}
+
+#errortext #error-text h1 {
+    color: #fe9e27;
+    text-shadow: 5px 3px dodgerblue;
+    font-size: 8em;
+}
+
+#errortext #error-text h2 {
+    color: dodgerblue;
+    text-shadow: 2px 2px #fe9e27;
+}
+
+/*
+CONTATO
+*/
+
+#contato {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contato a {
+    text-decoration: none;
+    color: dodgerblue;
+    font-size: .7em;
+}
+
+#contato a:hover {
+    color: rgb(13, 76, 139);
+}
+
+#contato h2 {
+    color: dodgerblue;
+    width: 100%;
+    text-shadow: 5px 3px #fe9e27;
+    margin: 0 0 50px 0;
+}
+
+#contato img {
+    filter:invert(60%);
+}
+
+#contato img:hover {
+    width: 95px;
+    padding: 2.5px;
+}
+
+/*
+BOTÃO UP
+*/
+
+#top-bt {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    padding: 10px;
+    background: rgba(30,144,255,0.7);
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 10px;
+}
+
+#top-bt img {
+    width: 40px;
+}
+
+/*
+QR_BUTTON
+*/
+
+#qr {
+	position: fixed;
+	right: 0;
+	bottom: 130px;
+	display: flex;
+	flex-flow: row wrap;
+	flex-grow: 1;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	background: rgba(30,144,255,0.7);
+	border-radius: 10px 0 0 10px;
+	padding: 6px 2px 3px 6px;
+    transition: 0.4s;
+}
+
+#checkimg {
+	display: none;
+}
+
+#qrbt1 {
+    float: left;
+    cursor: pointer;
+}
+
+#qrbt2 {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+#qrbt3 {
+    float: left;
+    cursor: pointer;
+}
+
+#imgqr1 {
+	width: 20px;
+	transition: 0.2s;
+}
+
+#imgqr2 {
+	width: 0;
+	transition: 0.4s;
+}
+
+#imgqr3 {
+	width: 0;
+	transition: 0.2s;
+}
+
+#qr p {
+	padding: 0 0 4px 0;
+	margin: 0;
+	border: 0;
+	font-size: 0;
+	color: dodgerblue;
+	transition: 0.2s;
+}
+
+input:checked ~ #qr #qrbt2 img {
+	width: 120px;
+	padding: 5px 4px 0 2px;
+}
+
+input:checked ~ #qr p {
+    font-size: 8pt;
+    margin: 0 6px 0 0;
+}
+
+input:checked ~ #qr {
+	background: #fff;
+	padding: 0;
+	border: 1px solid dodgerblue;
+}
+
+input:checked ~ #qr #qrbt1 img {
+	width: 0;
+}
+
+input:checked ~ #qr #qrbt3 img {
+	padding: 0;
+	width: 20px;
+}
+
+/*
+RODAPÉ
+*/
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-color: #fe9e27;
+    color: #f1f1f1;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 8pt;
+}
+
+/*
+ADAPTATIVIDADE
+*/
+
+@media (max-width: 768px) {
+    p {
+        font-size: 1em;
+    }
+
+    #contato {
+        padding: 20px;
+    }
+
+    #top-bt {
+        right: 15px;
+        padding: 4px 5px 2px 5px;
+    }
+    
+    #top-bt img {
+        width: 30px;
+    }
+
+    #qr {
+        bottom: 100px;
+    }
+
+}
+
+@media (max-height: 420px) {
+    #errortext #error-text {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    p {
+        font-size: .93em;
+    }
+
+    #contato {
+        padding: 10px;
+    }
+
+    #contato a {
+        font-size: .6em;
+    }
+
+    #contato img {
+        max-width: 60px;
+    }
+    
+    #contato img:hover {
+    	width: 55px;
+    	padding: 2.5px;
+    }
+    
+    #top-bt {
+        right: 5px;
+    }
+    
+    footer {
+    text-align: center;
+    flex-direction: colum;
+    }
+}
+
+@media (max-height: 390px) {
+    #errortext #error-text {
+        padding-top: 80px;
+    }
+}

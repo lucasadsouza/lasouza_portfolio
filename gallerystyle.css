@@ -1,0 +1,531 @@
+/*
+GERAL
+*/
+
+body {
+    font-family: "Comfortaa", Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    background-color: #2a2a2a;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: "Oswald", "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+}
+
+#botao {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: dodgerblue;
+    font-size: 1em;
+    border-radius: 6px;
+}
+
+/*
+NAVEGAÇÃO
+*/
+
+#checkmenu {
+    display: none;
+}
+
+#menusetaimg {
+    transition: 0.2s;
+    transform: rotate(180deg);
+    width: 0;
+}
+
+nav #menubt {
+    padding: 14px 5px;
+}
+
+nav #menubt a {
+    transition: 0.4s;
+    font-size: 14pt;
+    color: white;
+    padding: 0 5px;
+}
+
+nav #menubt a:hover {
+    color: dodgerblue;
+}
+
+nav {
+    z-index: 9;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 30px;
+    width: auto;
+    height: 45px;
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 0 0 15px 0;
+}
+
+nav ul {
+    transition: 0.3s;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 0%;
+}
+
+nav ul li{
+    padding: 0 5px;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    font-size: 0pt;
+}
+
+nav ul li a:hover {
+    color: dodgerblue;
+}
+
+#checkmenu:checked ~ nav {
+    background-color: #1a1a1a;
+}
+
+#checkmenu:checked ~ nav ul {
+    width: 90%;
+}
+
+#checkmenu:checked ~ nav ul li a {
+    font-size: 12pt;
+}
+
+#checkmenu:checked ~ nav #menubt a {
+    font-size: 0px;
+}
+
+#checkmenu:checked ~ nav #menusetaimg {
+    padding: 0 2px 0 0;
+    width: 20px;
+}
+
+/*
+GALERIA
+*/
+
+#galeria {
+    text-align: center;
+    transition: all 0.4s;
+}
+
+#gallerytitle {
+    margin: 60px 0 30px 0;
+    color: white;
+    text-shadow: -5px 3px #fe9e27;
+}
+
+.filter {
+    display: none;
+}
+
+#filterstyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0);
+}
+
+#filterstyle label {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    color: white;
+    transition: 0.4s;
+}
+
+#filterstyle label p {
+    text-align: center;
+    width: 100%;
+}
+
+#filterstyle label:hover {
+    color: #fe9e27;
+}
+
+#filter:checked ~ #filterstyle label{
+    color: dodgerblue
+}
+
+#filter_originals:checked ~ #container .fanart {
+    display: none;
+}
+
+#filter_fanart:checked ~ #container .originals, #filter_fanart:checked ~ #container .inktober {
+    display: none;
+}
+
+#filter_inktober:checked ~ #container .originals, #filter_inktober:checked ~ #container .fanart {
+    display: none;
+}
+
+#container {
+    width: 1200px;
+    margin: 40px auto;
+    columns: 4;
+    column-gap: 40px;
+    text-align: left;
+    transition: 0.4s;
+}
+
+#container #box {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 10px;
+    background: dodgerblue;
+    overflow: hidden;
+    break-inside: avoid;
+    border-radius: 20px 0 20px 0;
+    transition: 0.4s;
+}
+
+#container #box img {
+    max-width: 100%;
+    border-radius: 15px 0 0 0;
+}
+
+#container #box:hover {
+    background: rgba(60,174,255);
+}
+
+#container #box h2 {
+    Color: #fff;
+    margin: 2px 0 2px 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+#container #box p {
+    color: #fff;
+    margin: 0;
+    padding: 0 0;
+    font-size: 16px;
+}
+
+#container #box h3 {
+    color: rgba(248, 248, 255, 0.568);
+    margin: 0;
+    padding: 10px 0 10px 0;
+    font-size: 13px;
+}
+
+#container #box h4 {
+    color: rgba(248, 248, 255, 0.568);
+    margin: 0;
+    padding: 8px 0 0 0;
+    font-size: 11px;
+}
+
+#container #box h4 a {
+    color: rgba(248, 248, 255, 0.568);
+}
+
+#container #box h4 a:hover {
+    color: #fff;
+}
+
+#container #box h5 {
+    color: rgba(248, 248, 255, 0.8);
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-size: 13px;
+}
+
+#container #socialmedia {
+    width: 125px;
+    padding: 2px 4px 0 2px;
+    background: #fff;
+    border-radius: 5px 0px 15px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    transition: 0.4s;
+}
+
+#container #socialmedia a {
+    filter: opacity(80%);
+    transition: 0.2s;
+}
+
+#container #socialmedia a:hover {
+    filter: opacity(100%);
+}
+
+/*
+BOTÃO UP
+*/
+
+#top-bt {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    padding: 10px;
+    background: rgba(30,144,255,0.7);
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 10px;
+}
+
+#top-bt img {
+    width: 40px;
+}
+
+/*
+QR_BUTTON
+*/
+
+#qr {
+	position: fixed;
+	right: 0;
+	bottom: 130px;
+	display: flex;
+	flex-flow: row wrap;
+	flex-grow: 1;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	background: rgba(30,144,255,0.7);
+	border-radius: 10px 0 0 10px;
+	padding: 6px 2px 3px 6px;
+    transition: 0.4s;
+}
+
+#checkimg {
+	display: none;
+}
+
+#qrbt1 {
+    float: left;
+    cursor: pointer;
+}
+
+#qrbt2 {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+#qrbt3 {
+    float: left;
+    cursor: pointer;
+}
+
+#imgqr1 {
+	width: 20px;
+	transition: 0.2s;
+}
+
+#imgqr2 {
+	width: 0;
+	transition: 0.4s;
+}
+
+#imgqr3 {
+	width: 0;
+	transition: 0.2s;
+}
+
+#qr p {
+	padding: 0 0 4px 0;
+	margin: 0;
+	border: 0;
+	font-size: 0;
+	color: dodgerblue;
+	transition: 0.2s;
+}
+
+#checkimg:checked ~ #qr #qrbt2 img {
+	width: 120px;
+	padding: 5px 4px 0 2px;
+}
+
+#checkimg:checked ~ #qr p {
+    font-size: 8pt;
+    margin: 0 6px 0 0;
+}
+
+#checkimg:checked ~ #qr {
+	background: #fff;
+	padding: 0;
+	border: 1px solid dodgerblue;
+}
+
+#checkimg:checked ~ #qr #qrbt1 img {
+	width: 0;
+}
+
+#checkimg:checked ~ #qr #qrbt3 img {
+	padding: 0;
+	width: 20px;
+}
+
+/*
+RODAPÉ
+*/
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-color: #fe9e27;
+    color: #f1f1f1;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 8pt;
+    transition: 0.4s;
+}
+
+footer a:hover {
+    color: lightskyblue;
+}
+
+/*
+ADAPTATIVIDADE
+*/
+
+@media (max-width: 1200px) {
+    #container {
+        columns: 2;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 0;
+    }
+
+    nav ul li {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        width: 90%;
+    }
+
+    nav ul li {
+        font-size: .8em;
+        padding-right: 5px;
+        padding-left: 0;
+    }
+
+    #container {
+        columns: 1;
+    }
+
+    #top-bt {
+        right: 15px;
+        padding: 4px 5px 2px 5px;
+    }
+    
+    #top-bt img {
+        width: 30px;
+    }
+
+    #qr {
+        bottom: 100px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: .93em;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: .7em;
+    }
+
+    #container {
+        width: calc(100% - 80px);
+        margin: 40px 40px;
+        column-gap: 30px;
+    }
+    
+    #container #box h2 {
+        Color: #fff;
+        margin: 2px 0 15px 0;
+        padding: 0;
+        font-size: 18px;
+    }
+    
+    #container #box p {
+        color: #fff;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    #container #box h3 {
+        color: rgba(248, 248, 255, 0.568);
+        margin: 0;
+        padding: 10px 0 10px 0;
+        font-size: 11px;
+    }
+    
+    #container #box h4 {
+        color: rgba(248, 248, 255, 0.568);
+        margin: 0;
+        padding: 8px 0 0 0;
+        font-size: 11px;
+    }
+
+    #top-bt {
+        right: 5px;
+    }
+    
+    footer {
+    text-align: center;
+    flex-direction: colum;
+    }
+}
+
+/*@media (max-width: 400px) {
+    #container {
+        columns: 1;
+    }
+}*/

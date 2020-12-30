@@ -1,0 +1,10 @@
+User-agent: * 
+
+Disallow: /index.html
+Disallow: /googleb549ee7358df9795.html
+Disallow: /404.html
+Disallow: /en-404.html
+Disallow: /pt-404.html
+
+Sitemap:
+https://lasouzadesigner.github.io/sitemap.xml

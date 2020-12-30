@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://lasouzadesigner.github.io/en</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://lasouzadesigner.github.io/en" />
+		<xhtml:link rel="alternate" hreflang="pt" href="https://lasouzadesigner.github.io/pt" />
+	</url>
+	<url>
+		<loc>https://lasouzadesigner.github.io/pt</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://lasouzadesigner.github.io/en" />
+		<xhtml:link rel="alternate" hreflang="pt" href="https://lasouzadesigner.github.io/pt" />
+	</url>
+</urlset>
